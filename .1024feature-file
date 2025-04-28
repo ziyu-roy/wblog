@@ -1,0 +1,7 @@
+fileChangeLogs:
+  - node_modules
+  - config/database.yml
+  - config/application.yml
+  - Gemfile.lock
+  - '.1024'
+  - log/development.log
