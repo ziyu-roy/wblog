@@ -5,3 +5,4 @@ fileChangeLogs:
   - Gemfile.lock
   - '.1024'
   - log/development.log
+  - README.md
