@@ -11,3 +11,5 @@ quick22222222
 
 
 close的root终端提交
+
+新issue thread
