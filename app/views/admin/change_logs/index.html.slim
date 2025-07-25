@@ -1,0 +1,29 @@
+.card
+  .card-header
+    .float-sm-left
+      h3.card-title 更新日志管理
+    .float-sm-right
+      = link_to '创建更新日志', new_admin_change_log_path, class: 'btn btn-primary'
+  .card-body
+    table.table.table-hover
+      thead
+        tr
+          th 标题
+          th 创建时间
+          th 操作
+      tbody
+        - @change_logs.each do |change_log|
+          tr
+            td = link_to change_log.title, admin_change_log_path(change_log)
+            td
+              i.fa.fa-calendar
+              span = format_time(change_log.created_at)
+            td
+              = link_to '查看', admin_change_log_path(change_log), class: 'btn btn-sm btn-info'
+              = link_to '编辑', edit_admin_change_log_path(change_log), class: 'btn btn-sm btn-warning'
+              = link_to '删除', admin_change_log_path(change_log), method: 'DELETE', 'data-confirm' => '确认删除?', class: 'btn btn-sm btn-danger'
+  .card-footer
+    .float-sm-left
+      | 总计: #{@change_logs.total_count}
+    .float-sm-right
+      = paginate @change_logs
