@@ -7,11 +7,11 @@
 :root {
   --bg-color: #ffffff;
   --text-color: #333333;
-  --navbar-bg: #343a40;
-  --navbar-text: #ffffff;
-  --navbar-brand-color: rgba(255, 255, 255, 0.9);
-  --navbar-link-color: rgba(255, 255, 255, 0.55);
-  --navbar-link-hover-color: rgba(255, 255, 255, 0.75);
+  --navbar-bg: #f8f9fa;
+  --navbar-text: #333333;
+  --navbar-brand-color: rgba(51, 51, 51, 0.9);
+  --navbar-link-color: rgba(51, 51, 51, 0.7);
+  --navbar-link-hover-color: rgba(51, 51, 51, 0.9);
   --card-bg: #ffffff;
   --card-border: #dee2e6;
   --border-color: #dee2e6;
@@ -27,7 +27,7 @@
   --input-border: #ced4da;
   --footer-bg: #f8f9fa;
   --footer-text: #6c757d;
-  --theme-toggle-hover: rgba(255, 255, 255, 0.1);
+  --theme-toggle-hover: rgba(0, 0, 0, 0.1);
 }
 
 // Dark theme variables
