@@ -1,0 +1,214 @@
+// Theme transition for smooth switching
+.theme-transition * {
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out !important;
+}
+
+// Light theme variables (default)
+:root {
+  --bg-color: #ffffff;
+  --text-color: #333333;
+  --navbar-bg: #343a40;
+  --navbar-text: #ffffff;
+  --navbar-brand-color: rgba(255, 255, 255, 0.9);
+  --navbar-link-color: rgba(255, 255, 255, 0.55);
+  --navbar-link-hover-color: rgba(255, 255, 255, 0.75);
+  --card-bg: #ffffff;
+  --card-border: #dee2e6;
+  --border-color: #dee2e6;
+  --muted-color: #6c757d;
+  --code-bg: #f8f9fa;
+  --blockquote-bg: #f8f9fa;
+  --blockquote-border: #dee2e6;
+  --link-color: #2199e8;
+  --link-hover-color: #1a7db8;
+  --btn-primary-bg: #007bff;
+  --btn-primary-border: #007bff;
+  --input-bg: #ffffff;
+  --input-border: #ced4da;
+  --footer-bg: #f8f9fa;
+  --footer-text: #6c757d;
+  --theme-toggle-hover: rgba(255, 255, 255, 0.1);
+}
+
+// Dark theme variables
+[data-theme="dark"] {
+  --bg-color: #121212;
+  --text-color: #e0e0e0;
+  --navbar-bg: #1f1f1f;
+  --navbar-text: #ffffff;
+  --navbar-brand-color: rgba(255, 255, 255, 0.9);
+  --navbar-link-color: rgba(255, 255, 255, 0.65);
+  --navbar-link-hover-color: rgba(255, 255, 255, 0.85);
+  --card-bg: #1e1e1e;
+  --card-border: #333333;
+  --border-color: #333333;
+  --muted-color: #adb5bd;
+  --code-bg: #2d2d2d;
+  --blockquote-bg: #252525;
+  --blockquote-border: #404040;
+  --link-color: #4db8ff;
+  --link-hover-color: #66c2ff;
+  --btn-primary-bg: #0d6efd;
+  --btn-primary-border: #0d6efd;
+  --input-bg: #2d2d2d;
+  --input-border: #495057;
+  --footer-bg: #1a1a1a;
+  --footer-text: #adb5bd;
+  --theme-toggle-hover: rgba(255, 255, 255, 0.1);
+}
+
+// Apply theme variables to existing elements
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+// Navigation bar theming
+.navbar-dark {
+  background-color: var(--navbar-bg) !important;
+  
+  .navbar-brand {
+    color: var(--navbar-brand-color) !important;
+    
+    &:hover, &:focus {
+      color: var(--navbar-text) !important;
+    }
+  }
+  
+  .navbar-nav .nav-link {
+    color: var(--navbar-link-color) !important;
+    
+    &:hover, &:focus {
+      color: var(--navbar-link-hover-color) !important;
+    }
+  }
+}
+
+// Theme toggle button styles
+.theme-toggle-btn {
+  background: none;
+  border: none;
+  color: var(--navbar-link-color);
+  font-size: 1.1rem;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  &:hover {
+    color: var(--navbar-link-hover-color);
+    background-color: var(--theme-toggle-hover);
+  }
+  
+  &:focus {
+    outline: none;
+    color: var(--navbar-link-hover-color);
+    background-color: var(--theme-toggle-hover);
+  }
+}
+
+// Cards and containers
+.card {
+  background-color: var(--card-bg);
+  border-color: var(--card-border);
+  color: var(--text-color);
+}
+
+// Links
+a {
+  color: var(--link-color);
+  
+  &:hover {
+    color: var(--link-hover-color);
+  }
+}
+
+// Forms
+.form-control {
+  background-color: var(--input-bg);
+  border-color: var(--input-border);
+  color: var(--text-color);
+  
+  &:focus {
+    background-color: var(--input-bg);
+    color: var(--text-color);
+  }
+}
+
+// Buttons
+.btn-primary {
+  background-color: var(--btn-primary-bg);
+  border-color: var(--btn-primary-border);
+}
+
+// Code blocks
+code, pre {
+  background-color: var(--code-bg);
+  color: var(--text-color);
+}
+
+// Blockquotes
+blockquote {
+  background-color: var(--blockquote-bg);
+  border-left-color: var(--blockquote-border);
+  color: var(--text-color);
+}
+
+// Borders
+.border {
+  border-color: var(--border-color) !important;
+}
+
+// Text muted
+.text-muted {
+  color: var(--muted-color) !important;
+}
+
+// Footer
+footer {
+  background-color: var(--footer-bg);
+  color: var(--footer-text);
+}
+
+// Ensure navbar toggler icon is visible in dark mode
+.navbar-dark .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+// Table theming for dark mode
+.table {
+  color: var(--text-color);
+  
+  th, td {
+    border-color: var(--border-color);
+  }
+}
+
+.table-dark {
+  background-color: var(--card-bg);
+  color: var(--text-color);
+}
+
+// Modal theming
+.modal-content {
+  background-color: var(--card-bg);
+  color: var(--text-color);
+}
+
+// Dropdown theming
+.dropdown-menu {
+  background-color: var(--card-bg);
+  border-color: var(--border-color);
+  
+  .dropdown-item {
+    color: var(--text-color);
+    
+    &:hover, &:focus {
+      background-color: var(--blockquote-bg);
+      color: var(--text-color);
+    }
+  }
+}
