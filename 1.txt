@@ -2,3 +2,6 @@
 issue thread
 quick thread按钮提交
 zd222222222222
+
+
+禁用key后导入仓库
