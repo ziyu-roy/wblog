@@ -1,0 +1,255 @@
+// Clacky-inspired Dark Theme Changelog
+.clacky-changelog {
+  min-height: 100vh;
+  background: #0a0a0a;
+  color: #ffffff;
+  padding: 2rem 0;
+}
+
+.changelog-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+// Header section
+.changelog-header {
+  text-align: center;
+  margin-bottom: 4rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #333;
+}
+
+.changelog-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.02em;
+}
+
+.changelog-subtitle {
+  font-size: 1.2rem;
+  color: #999;
+  margin: 0;
+  font-weight: 400;
+}
+
+// Timeline content
+.changelog-content {
+  position: relative;
+  padding-left: 8rem;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    left: 4rem;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: #333;
+  }
+}
+
+.changelog-date-section {
+  margin-bottom: 3rem;
+}
+
+.timeline-date {
+  position: absolute;
+  left: 0;
+  width: 7rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.timeline-dot {
+  width: 8px;
+  height: 8px;
+  background: #666;
+  border-radius: 50%;
+  border: 2px solid #0a0a0a;
+  position: relative;
+  z-index: 1;
+  margin-left: 3.5rem;
+}
+
+.date-text {
+  font-size: 1rem;
+  color: #ccc;
+  font-weight: 500;
+  white-space: nowrap;
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.changelog-section {
+  margin-bottom: 2.5rem;
+  position: relative;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 1rem;
+  line-height: 1.3;
+}
+
+.section-content {
+  color: #cccccc;
+  line-height: 1.7;
+  font-size: 1rem;
+  
+  p {
+    margin-bottom: 1rem;
+    
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  
+  // Style for bullet points
+  ul, ol {
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+  }
+  
+  li {
+    margin-bottom: 0.5rem;
+    color: #cccccc;
+    
+    &::marker {
+      color: #666;
+    }
+  }
+  
+  // Special styling for feature lists
+  ul {
+    li {
+      position: relative;
+      padding-left: 0.5rem;
+      
+      &::before {
+        content: '\u2022';
+        color: #666;
+        position: absolute;
+        left: -1rem;
+      }
+    }
+  }
+}
+
+// Empty state
+.changelog-empty {
+  text-align: center;
+  padding: 4rem 2rem;
+  margin-top: 3rem;
+}
+
+.empty-message {
+  font-size: 1.3rem;
+  color: #999;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.empty-submessage {
+  color: #666;
+  font-size: 1rem;
+  margin: 0;
+}
+
+// Pagination styling
+.changelog-pagination {
+  margin-top: 4rem;
+  text-align: center;
+  
+  .pagination {
+    justify-content: center;
+    
+    .page-link {
+      color: #ccc;
+      background-color: transparent;
+      border: 1px solid #333;
+      padding: 0.5rem 1rem;
+      
+      &:hover {
+        background-color: #222;
+        border-color: #555;
+        color: #fff;
+      }
+    }
+    
+    .page-item.active .page-link {
+      background-color: #333;
+      border-color: #333;
+      color: #fff;
+    }
+  }
+}
+
+// Admin styles
+.admin-changelog-actions {
+  .btn + .btn {
+    margin-left: 0.5rem;
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+  .clacky-changelog {
+    padding: 1rem 0;
+  }
+  
+  .changelog-container {
+    padding: 0 1rem;
+  }
+  
+  .changelog-title {
+    font-size: 2rem;
+  }
+  
+  .changelog-subtitle {
+    font-size: 1rem;
+  }
+  
+  .changelog-header {
+    margin-bottom: 2rem;
+  }
+  
+  .changelog-content {
+    padding-left: 2rem;
+    
+    &::before {
+      left: 1rem;
+    }
+  }
+  
+  .timeline-date {
+    position: static;
+    width: auto;
+    margin-bottom: 1rem;
+    justify-content: flex-start;
+  }
+  
+  .timeline-dot {
+    margin-left: 0;
+  }
+  
+  .date-text {
+    position: static;
+    transform: none;
+  }
+  
+  .section-title {
+    font-size: 1.2rem;
+  }
+  
+  .section-content {
+    font-size: 0.9rem;
+  }
+}

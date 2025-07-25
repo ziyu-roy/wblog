@@ -1,0 +1,31 @@
+- content_for(:title) do
+  | 更新日志
+
+.clacky-changelog
+  .changelog-container
+    .changelog-header
+      h1.changelog-title 更新日志
+      p.changelog-subtitle 系统功能更新记录
+    
+    - if @change_logs.any?
+      .changelog-content
+        - current_date = nil
+        - @change_logs.each do |change_log|
+          - log_date = change_log.created_at.strftime('%b %d, %Y')
+          - if current_date != log_date
+            - current_date = log_date
+            .changelog-date-section
+              .timeline-date
+                .timeline-dot
+                .date-text = log_date
+          .changelog-section
+            .section-title = change_log.title
+            .section-content
+              = simple_format(change_log.content)
+      
+      .changelog-pagination
+        = paginate @change_logs
+    - else
+      .changelog-empty
+        p.empty-message 暂无更新记录
+        p.empty-submessage 敬请期待系统功能更新
