@@ -1,2 +1,3 @@
 开启key导入新仓库
 issue thread
+quick thread按钮提交
