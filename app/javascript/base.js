@@ -16,4 +16,8 @@ import "./controllers"
 
 $(document).on('turbo:load', function(){
   $('[data-toggle="tooltip"]').tooltip()
+  
+  // Initialize theme immediately on page load
+  const savedTheme = localStorage.getItem('theme') || 'light'
+  document.documentElement.setAttribute('data-theme', savedTheme)
 })

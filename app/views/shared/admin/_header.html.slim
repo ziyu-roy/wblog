@@ -9,6 +9,10 @@ nav class="app-header navbar navbar-expand bg-body"
     = yield(:search)
   /! Right navbar links
   ul.navbar-nav.ml-auto
+    /! Theme toggle button
+    li.nav-item
+      button class="theme-toggle-btn nav-link" data-controller="theme" data-action="click->theme#toggle" type="button" title="切换主题"
+        i class="fa fa-moon" data-theme-target="icon"
     /! Messages Dropdown Menu
     li.nav-item.dropdown.show
       a.nav-link.dropdown-toggle href="javascript:void(0)" data-toggle="dropdown"
